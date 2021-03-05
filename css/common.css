@@ -364,7 +364,7 @@ body {
 
   fill: var(--font-color-white);
 
-  transition-property: fill, background-color, border-color;
+  transition-property: background-color, fill, border-color;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
 }
