@@ -16,7 +16,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--bg-color-dark);
+  background-color: $bg-color-dark;
 }
 
 .welcome__title {
@@ -27,15 +27,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  color: var(--font-color-white);
-}
-
-.btn-order {
-  margin: 30px 0 0;
-  padding-left: 32px;
-  padding-right: 32px;
-
-  box-shadow: 0px 4px 4px var(--btn-boxshadow-color);
+  color: $font-color-white;
 }
 
 /* -----Advantages styles----- */
@@ -51,8 +43,20 @@
   max-width: 270px;
 }
 
+.advantages__wrapper {
+  height: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+
+  background-color: $bg-color-secondary;
+}
+
 .advantages__item:not(:first-child) {
-  margin-left: var(--item-set-gap);
+  margin-left: $item-set-gap;
 }
 
 .advantages__item--title {
@@ -68,19 +72,7 @@
 .advantages__item--text {
   margin-top: 10px;
   line-height: 1.714;
-  color: var(--font-color-secondary);
-}
-
-.thumb {
-  height: 120px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 4px;
-
-  background-color: var(--bg-color-secondary);
+  color: $font-color-secondary;
 }
 
 /* -----Visuals styles----- */
@@ -101,14 +93,14 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  margin-left: calc(-1 * var(--item-set-gap));
+  margin-left: calc(-1 * $item-set-gap);
 }
 
 .visuals-list__item {
   position: relative;
 
-  flex-basis: calc(100% / 3 - var(--item-set-gap));
-  margin-left: var(--item-set-gap);
+  flex-basis: calc(100% / 3 - $item-set-gap);
+  margin-left: $item-set-gap;
 }
 
 .visuals__descr {
@@ -119,7 +111,7 @@
   left: 0;
   width: 100%;
 
-  background-color: var(--transparent-items);
+  background-color: $transparent-items;
 }
 
 .visuals__descr--title {
@@ -128,12 +120,12 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: var(--font-color-white);
+  color: $font-color-white;
 }
 
 /* -----Team styles----- */
 .team {
-  background-color: var(--bg-color-secondary);
+  background-color: $bg-color-secondary;
 
   padding: 94px 0;
 }
@@ -152,22 +144,22 @@
 
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--item-set-gap));
+  margin-left: calc(-1 * $item-set-gap);
 }
 
 .team-mate__card {
-  flex-basis: calc(100% / 4 - var(--item-set-gap));
-  margin-left: var(--item-set-gap);
+  flex-basis: calc(100% / 4 - $item-set-gap);
+  margin-left: $item-set-gap;
   max-width: 270px;
 
   text-align: center;
   font-size: 16px;
   line-height: 1.18;
 
-  background-color: var(--bg-color-main);
+  background-color: $bg-color-main;
 
   border-radius: 0px 0px 4px 4px;
-  box-shadow: var(--team-mate-box-shadow);
+  box-shadow: $team-mate-box-shadow;
 }
 
 .team-mate__meta {
@@ -180,7 +172,7 @@
 
 .team-mate__position {
   margin-top: 10px;
-  color: var(--font-color-secondary);
+  color: $font-color-secondary;
 }
 
 /* -----Clients styles----- */
@@ -211,12 +203,12 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid var(--social-link-color);
+  border: 1px solid $social-link-color;
   border-radius: 4px;
 
   transition-property: border;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  transition-duration: $transiton-duration-time;
+  transition-timing-function: $timing-fn;
 }
 
 .clients-list__item:not(:first-child) {
@@ -225,22 +217,22 @@
 
 .clients-list__item:focus,
 .clients-list__item:hover {
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
   border-radius: 4px;
-  fill: var(--accent-color);
+  fill: $accent-color;
 
   cursor: pointer;
 }
 
 .clients-list__icon {
-  fill: var(--social-link-color);
+  fill: $social-link-color;
 
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  transition-duration: $transiton-duration-time;
+  transition-timing-function: $timing-fn;
 }
 
 .clients-list__item:focus .clients-list__icon,
 .clients-list__item:hover .clients-list__icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
