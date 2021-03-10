@@ -122,12 +122,12 @@ body {
   text-decoration: none;
 }
 
-.logo__accent {
-  color: var(--accent-color);
+.logo--footer {
+  color: var(--font-color-white);
 }
 
-.logo__footer {
-  color: var(--font-color-white);
+.logo__accent {
+  color: var(--accent-color);
 }
 
 /* -----BTN----- */
