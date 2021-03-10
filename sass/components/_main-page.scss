@@ -41,6 +41,26 @@
 
 .advantages__item {
   max-width: 270px;
+
+  &:not(:first-child) {
+    margin-left: var(--item-set-gap);
+  }
+
+  &--title {
+    margin-top: 30px;
+  
+    font-weight: 700;
+    line-height: 1.172;
+    text-transform: uppercase;
+  
+    text-align: left;
+  }
+  
+  &--text {
+    margin-top: 10px;
+    line-height: 1.714;
+    color: var(--font-color-secondary);
+  }
 }
 
 .advantages__wrapper {
@@ -53,26 +73,6 @@
   border-radius: 4px;
 
   background-color: var(--bg-color-secondary);
-}
-
-.advantages__item:not(:first-child) {
-  margin-left: var(--item-set-gap);
-}
-
-.advantages__item--title {
-  margin-top: 30px;
-
-  font-weight: 700;
-  line-height: 1.172;
-  text-transform: uppercase;
-
-  text-align: left;
-}
-
-.advantages__item--text {
-  margin-top: 10px;
-  line-height: 1.714;
-  color: var(--font-color-secondary);
 }
 
 /* -----Visuals styles----- */
@@ -112,15 +112,15 @@
   width: 100%;
 
   background-color: var(--transparent-items);
-}
+  
+  &--title {
+    font-weight: 500;
+    line-height: 1.142;
+    text-align: center;
+    text-transform: uppercase;
 
-.visuals__descr--title {
-  font-weight: 500;
-  line-height: 1.142;
-  text-align: center;
-  text-transform: uppercase;
-
-  color: var(--font-color-white);
+    color: var(--font-color-white);
+  }
 }
 
 /* -----Team styles----- */
@@ -209,19 +209,19 @@
   transition-property: border;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
-}
 
-.clients-list__item:not(:first-child) {
-  margin-left: 30px;
-}
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
 
-.clients-list__item:focus,
-.clients-list__item:hover {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-  fill: var(--accent-color);
+  &:focus,
+  &:hover {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    fill: var(--accent-color);
 
-  cursor: pointer;
+    cursor: pointer;
+  }
 }
 
 .clients-list__icon {
@@ -230,9 +230,9 @@
   transition-property: fill;
   transition-duration: var(--transiton-duration-time);
   transition-timing-function: var(--timing-fn);
-}
 
-.clients-list__item:focus .clients-list__icon,
-.clients-list__item:hover .clients-list__icon {
-  fill: var(--accent-color);
+  .clients-list__item:focus &,
+  .clients-list__item:hover & {
+    fill: var(--accent-color);
+  }
 }
