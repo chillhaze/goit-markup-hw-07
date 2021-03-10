@@ -5,8 +5,7 @@
 
 /* ----Filter---- */
 .filter {
-  display: flex;
-  justify-content: center;
+  @include flexCenter;
 
   margin-bottom: 50px;
 }
@@ -30,8 +29,7 @@
   border-radius: 4px;
 
   transition-property: color, background-color, box-shadow;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   cursor: pointer;
   outline: none;
@@ -92,8 +90,7 @@
   display: block;
 
   transition-property: box-shadow;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &:focus,
   &:hover {
@@ -138,8 +135,8 @@
     transform: translateY(100%);
 
     transition-property: transform, background-color, color;
-    transition-duration: var(--transiton-duration-time);
-    transition-timing-function: var(--timing-fn);
+    @extend %transitDurTiming;
+
   }
 
   .portfolio-list__link:hover &--text,
@@ -147,8 +144,7 @@
     transform: translateY(0);
 
     transition-property: transform, background-color, color;
-    transition-duration: var(--transiton-duration-time);
-    transition-timing-function: var(--timing-fn);
+    @extend %transitDurTiming;
   }
 }
 

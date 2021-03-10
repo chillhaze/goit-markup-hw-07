@@ -26,8 +26,7 @@
   padding: 32px 0;
 
   transition-property: color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &:hover,
   &:focus {
@@ -63,8 +62,7 @@
 }
 
 .link--header {
-  display: flex;
-  align-items: center;
+  @include flexCenter;
 }
 
 .header-contacts__item:nth-child(2) {

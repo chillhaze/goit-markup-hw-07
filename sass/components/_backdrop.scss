@@ -12,8 +12,7 @@
 
   transform: rotate(0deg);
   transition-property: opacity, visibility, transform;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 }
 
 .backdrop__is-hidden {
@@ -24,8 +23,7 @@
   transform: rotate(15deg);
 
   transition-property: opacity, visibility, transform;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 }
 
 .modal {
@@ -70,9 +68,7 @@
 
   background-color: var(--bg-color-main);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -86,8 +82,7 @@
 
   transform: rotate(0deg);
   transition-property: fill, transform;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   .btn-close:hover &,
   .btn-close:focus & {

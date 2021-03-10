@@ -66,9 +66,7 @@
 .advantages__wrapper {
   height: 120px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
 
   border-radius: 4px;
 
@@ -199,16 +197,13 @@
   width: 170px;
   height: 90px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
 
   border: 1px solid var(--social-link-color);
   border-radius: 4px;
 
   transition-property: border;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &:not(:first-child) {
     margin-left: 30px;
@@ -228,8 +223,7 @@
   fill: var(--social-link-color);
 
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   .clients-list__item:focus &,
   .clients-list__item:hover & {

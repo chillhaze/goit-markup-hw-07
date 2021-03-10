@@ -40,8 +40,7 @@
   border-radius: 4px;
 
   transition-property: border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &:focus {
     outline: none;
@@ -60,8 +59,7 @@
   border-radius: 4px;
 
   transition-property: border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &::placeholder {
     font-size: 12px;
@@ -90,8 +88,7 @@
   fill: currentColor;
 
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   .modal-form__input:focus + & {
     fill: var(--accent-color);
@@ -108,9 +105,7 @@
 }
 
 .checkbox__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
 
   font-size: 14px;
   line-height: 1.714;
@@ -131,8 +126,7 @@
   fill: var(--font-color-white);
 
   transition-property: background-color, fill, border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   .checkbox__input:focus + & {
     border-color: var(--accent-color);
@@ -152,8 +146,7 @@
 }
 
 .modal-form__submit {
-  display: flex;
-  justify-content: center;
+  @include flexCenter;
 }
 
 .btn-form {
@@ -164,8 +157,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition-property: background-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &:hover,
   &:focus {

@@ -10,25 +10,21 @@
 }
 
 .social__item {
-  display: flex;
-  justify-content: center;
+  @include flexCenter;
 }
 
 .social__link {
   width: 44px;
   height: 44px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
 
   border-radius: 50%;
 
   background-color: transparent;
 
   transition-property: background-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   &:hover,
   &:focus {
@@ -45,8 +41,7 @@
   fill: var(--social-link-color);
 
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
+  @extend %transitDurTiming;
 
   .social__link:hover &,
   .social__link:focus & {
@@ -60,7 +55,7 @@
 
 /* -----Footer Social Styles----- */
 .footer-social {
-  margin-left: 70px;
+  margin-left: 86px;
 }
 
 .footer-social__title {

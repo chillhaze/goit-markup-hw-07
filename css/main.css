@@ -26,6 +26,12 @@
   --transiton-duration-time: 250ms;
 }
 
+.social__link, .social__icon, .link, .clients-list__item, .clients-list__icon, .btn-filter, .portfolio-list__link, .thumb__descr--text, .portfolio-list__link:hover .thumb__descr--text,
+.portfolio-list__link:focus .thumb__descr--text, .backdrop, .backdrop__is-hidden, .close-icon, .modal-form__input, .modal-form__comment, .input-icon, .checkbox-icon, .btn-form {
+  transition-duration: var(--transiton-duration-time);
+  transition-timing-function: var(--timing-fn);
+}
+
 ul,
 li {
   list-style-type: none;
@@ -177,6 +183,7 @@ body {
 .social__item {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .social__link {
@@ -188,8 +195,6 @@ body {
   border-radius: 50%;
   background-color: transparent;
   transition-property: background-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .social__link:hover, .social__link:focus {
@@ -204,8 +209,6 @@ body {
 .social__icon {
   fill: var(--social-link-color);
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .social__link:hover .social__icon,
@@ -219,7 +222,7 @@ body {
 
 /* -----Footer Social Styles----- */
 .footer-social {
-  margin-left: 70px;
+  margin-left: 86px;
 }
 
 .footer-social__title {
@@ -255,8 +258,6 @@ body {
 .link {
   padding: 32px 0;
   transition-property: color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .link:hover, .link:focus {
@@ -287,6 +288,7 @@ body {
 
 .link--header {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -473,13 +475,11 @@ body {
   width: 170px;
   height: 90px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border: 1px solid var(--social-link-color);
   border-radius: 4px;
   transition-property: border;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .clients-list__item:not(:first-child) {
@@ -496,8 +496,6 @@ body {
 .clients-list__icon {
   fill: var(--social-link-color);
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .clients-list__item:focus .clients-list__icon,
@@ -514,6 +512,7 @@ body {
 .filter {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
 }
 
@@ -532,8 +531,6 @@ body {
   background-color: var(--bg-color-secondary);
   border-radius: 4px;
   transition-property: color, background-color, box-shadow;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
   cursor: pointer;
   outline: none;
 }
@@ -580,8 +577,6 @@ body {
 .portfolio-list__link {
   display: block;
   transition-property: box-shadow;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .portfolio-list__link:focus, .portfolio-list__link:hover {
@@ -618,16 +613,12 @@ body {
   background-color: var(--accent-color-op09);
   transform: translateY(100%);
   transition-property: transform, background-color, color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .portfolio-list__link:hover .thumb__descr--text,
 .portfolio-list__link:focus .thumb__descr--text {
   transform: translateY(0);
   transition-property: transform, background-color, color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 /* -----Footer styles----- */
@@ -669,8 +660,6 @@ body {
   pointer-events: none;
   transform: rotate(0deg);
   transition-property: opacity, visibility, transform;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .backdrop__is-hidden {
@@ -678,8 +667,6 @@ body {
   visibility: hidden;
   transform: rotate(15deg);
   transition-property: opacity, visibility, transform;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .modal {
@@ -727,8 +714,6 @@ body {
   fill: currentColor;
   transform: rotate(0deg);
   transition-property: fill, transform;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .btn-close:hover .close-icon,
@@ -774,8 +759,6 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition-property: border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .modal-form__input:focus {
@@ -791,8 +774,6 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition-property: border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .modal-form__comment::placeholder {
@@ -816,8 +797,6 @@ body {
   height: 20px;
   fill: currentColor;
   transition-property: fill;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .modal-form__input:focus + .input-icon {
@@ -835,8 +814,8 @@ body {
 
 .checkbox__label {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -851,8 +830,6 @@ body {
   border-radius: 2px;
   fill: var(--font-color-white);
   transition-property: background-color, fill, border-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .checkbox__input:focus + .checkbox-icon {
@@ -873,6 +850,7 @@ body {
 .modal-form__submit {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .btn-form {
@@ -881,8 +859,6 @@ body {
   padding-right: 55px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition-property: background-color;
-  transition-duration: var(--transiton-duration-time);
-  transition-timing-function: var(--timing-fn);
 }
 
 .btn-form:hover, .btn-form:focus {
