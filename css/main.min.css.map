@@ -6,7 +6,7 @@
         "../sass/utils/_variables.scss",
         "../sass/utils/_mixins.scss",
         "../sass/utils/_placeholders.scss",
-        "../sass/components/_common.scss",
+        "../sass/base/_common.scss",
         "../sass/components/_logo.scss",
         "../sass/components/_button.scss",
         "../sass/components/_social.scss",
